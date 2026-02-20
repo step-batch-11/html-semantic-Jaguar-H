@@ -84,7 +84,7 @@ body > header > nav {
   justify-content: center;
   align-items: center;
   gap: 5em;
-  background-color: rgb(15, 91, 26);
+  background-color: rgb(24, 148, 42);
   margin-top: 2.5em;
 }
 
@@ -147,6 +147,12 @@ mark {
 }
 mark:hover {
   background-color: rgb(127, 209, 127);
+}
+
+details {
+  padding-left: 0.5em;
+  background-color: rgb(201, 242, 201);
+  border-left: 4px solid rgb(2, 85, 2);
 }
 
 summary {
