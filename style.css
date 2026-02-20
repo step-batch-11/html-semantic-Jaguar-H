@@ -43,7 +43,7 @@ article > header address {
   color: #555;
 }
 
-section {
+article > section {
   display: flex;
   flex-direction: column;
   gap: 0.6em;
@@ -94,7 +94,7 @@ nav > a {
   text-decoration: none;
   font-size: 25px;
   font-weight: 500;
-  animation-name:scale;
+  animation-name: scale;
   animation-delay: 0.5s;
   animation-duration: 0.7s;
   animation-iteration-count: 1;
@@ -102,15 +102,15 @@ nav > a {
 }
 
 @keyframes scale {
-  from{
+  from {
     scale: 0.4;
   }
-  to{
+  to {
     scale: 1;
   }
 }
 
-nav>a:hover{
+nav > a:hover {
   color: #f4f3f3;
   scale: 1.2;
 }
@@ -118,8 +118,9 @@ nav>a:hover{
 dialog {
   position: fixed;
   padding-bottom: 10px;
-  left: 76%;
-  bottom: 4%;
+  left: 80%;
+  bottom: 5%;
+  border-radius: 10px;
 }
 
 aside {
@@ -141,9 +142,14 @@ body > footer {
   order: 300;
 }
 
-mark{
+mark {
   background-color: rgb(180, 215, 180);
 }
-mark:hover{
+mark:hover {
   background-color: rgb(127, 209, 127);
+}
+
+summary {
+  font-size: 20px;
+  font-weight: 600;
 }
