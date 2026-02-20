@@ -8,7 +8,8 @@ body {
   font-family:
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
+  height: 100%;
+  position: relative;
   line-height: 1.5;
   background-color: #fff;
   color: #222;
@@ -19,7 +20,7 @@ article {
   flex-direction: column;
   gap: 2em;
   max-width: 900px;
-  margin: 4em auto;
+  margin: 2em auto;
   padding: 0 3em;
 }
 
@@ -49,6 +50,9 @@ section {
   padding-bottom: 2em;
   border-bottom: 1px solid #ccc;
 }
+main {
+  position: relative;
+}
 
 section h3 {
   font-size: 1.6em;
@@ -74,28 +78,72 @@ body > header {
 
 body > header > nav {
   width: 100%;
-  height: 3.5em;
-  order: -1;
+  height: 4em;
+  /* order: -1;  */
   display: flex;
   justify-content: center;
-  /* justify-content: space-around; */
   align-items: center;
   gap: 5em;
-  background-color: rgb(52, 51, 51);
-  margin-bottom: 2em;
+  background-color: rgb(15, 91, 26);
+  margin-top: 2.5em;
 }
 
-a {
+nav > a {
   display: inline-block;
-  color: #ddd;
+  color: #d8dcdc;
   text-decoration: none;
   font-size: 25px;
   font-weight: 500;
+  animation-name:scale;
+  animation-delay: 0.5s;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  transition: all 0.4s;
 }
 
-body > footer, dialog, aside {
-  display: flex;
+@keyframes scale {
+  from{
+    scale: 0.4;
+  }
+  to{
+    scale: 1;
+  }
+}
+
+nav>a:hover{
+  color: #f4f3f3;
+  scale: 1.2;
+}
+
+dialog {
+  position: fixed;
   padding-bottom: 10px;
-  flex-direction: column;
-  align-items: center;
+  left: 76%;
+  bottom: 4%;
+}
+
+aside {
+  position: absolute;
+  height: 80%;
+  padding: 0px 20px;
+  top: 17%;
+  left: 2%;
+  border: 1px solid gray;
+}
+
+body > footer {
+  display: flex;
+  color: rgb(220, 220, 220);
+  background-color: rgb(15, 91, 26);
+
+  justify-content: center;
+  gap: 2em;
+  order: 300;
+}
+
+mark{
+  background-color: rgb(180, 215, 180);
+}
+mark:hover{
+  background-color: rgb(127, 209, 127);
 }
